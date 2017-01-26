@@ -1,4 +1,4 @@
 
 *line graph
 *bar graph
-*anscombe.py
+*step graph
