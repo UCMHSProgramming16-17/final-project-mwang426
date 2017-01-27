@@ -13,8 +13,20 @@ cleaned_data = pd.DataFrame({'production':data['Apple Production $']})
 cleaned_data.describe()
 cleaned_data = pd.DataFrame({'production':data['Apple Production $'], 'year': data['Year']})
 
+nums = []
+for n in list(cleaned_data['production']):
+    n2 = ''
+    for char in n:
+        if char != ',':
+            n2 += char
+    print(n2)
+    nums.append(int(2))
+
+print(nums)
+cleaned_data['production'] = nums
+
 #import line chart and bar graph from bokeh
-from bokeh.charts import Line, output_file, save, Bar
+from bokeh.charts import Line, output_file, save, Bar, save
 
 #set up the bar graph with specific parameters. Bar graph is used to show simply how much production per year
 b = Bar(cleaned_data, label = 'year', values = 'production', title = 'Apple Production Bar Graph', outline_line_color ='blue', background_fill_color = 'pink', yscale='linear')
