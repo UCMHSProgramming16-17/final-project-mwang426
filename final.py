@@ -17,7 +17,7 @@ cleaned_data = pd.DataFrame({'production':data['Apple Production $'], 'year': da
 from bokeh.charts import Line, output_file, save, Bar
 
 #set up the bar graph with specific parameters. Bar graph is used to show simply how much production per year
-b = Bar(cleaned_data, label = 'year', title = 'Apple Production Bar Graph', outline_line_color ='blue', background_fill_color = 'pink', yscale='linear')
+b = Bar(cleaned_data, label = 'year', values = 'production', title = 'Apple Production Bar Graph', outline_line_color ='blue', background_fill_color = 'pink', yscale='linear')
 #create the output file and save the bar graph to the output file
 output_file('bar.html')
 save(b)
