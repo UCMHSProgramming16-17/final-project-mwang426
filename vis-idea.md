@@ -1,4 +1,4 @@
 
 *line graph
 *bar graph
-*step graph
+*donut graph
