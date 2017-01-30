@@ -20,8 +20,7 @@ for n in list(cleaned_data['production']):
         if char != ',':
             n2 += char
     print(n2)
-    nums.append(int(2))
-
+    nums.append(int(n2))
 print(nums)
 cleaned_data['production'] = nums
 
